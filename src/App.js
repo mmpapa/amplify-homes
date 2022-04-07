@@ -6,16 +6,11 @@ import '@aws-amplify/ui-react/styles.css';
 
 function App() {
   return (
-    <Authenticator socialProviders={['amazon', 'apple', 'facebook', 'google']}>
-      {({ signOut, user }) => (
       <div className="App">
         <NavBar />
         <HomeCollection />
         <MarketingFooter />
-        <button style={styles.button} onClick={signOut}>Sign out</button>
       </div>
-      )}
-    </Authenticator>
   );
 }
 const styles = {
